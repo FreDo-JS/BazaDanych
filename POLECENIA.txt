@@ -1,0 +1,23 @@
+
+
+Wybieraj¹ce wszystkie dane z tabeli adres
+
+Wybieraj¹ce wszystkie dane z tabeli Samolot
+
+Wybieraj¹ce wszystkie dane z tabeli status_Rezerwacji
+
+Wybieraj¹ce wszystkie dane gdzie powiat to warszawa z tabeli adres
+
+Wybierajace dane z tabeli pasa¿er dla pasazerow, których imie zaczyna siê na P
+
+Wybierajace dane o baga¿ach w tabeli rezerwacja, których nazwa koñczy siê na Y
+
+Wybierajace dane o baga¿ach w tabeli rezerwacja, których nazwa koñczy siê na Y oraz zaczyna siê na R
+
+Dodajace do tabeli samolot nowy wiersz o nazwie 'Rakieta' oraz 'i20'
+
+Dodajace do tabeli status_rezerwacji nowy wiersz o nazwie 'Anulowana'
+
+Wyœwietl informacje na temat statusu z tabeli status_rezerwacji i ogranicz wynik do jednego zwróconego wiersza
+
+Zmieñ dane w tabeli status rezerwacji z 'Anulowanej' o id 6 na 'Zmieniony'
