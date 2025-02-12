@@ -15,3 +15,6 @@
 15. Wybierz NAJWIEKSZA cene z tabeli filmy
 16. Wybierz wszystkie wiersze z tabeli filmy i ZSSUMUJ WSZYSTKIE WIERSZE WYKLUCZ POWTÓRZENIA /Odpowiedz oczekiwana = 10;
 17. Wybierz wszystko z tabeli pracownicy, którzy nie mieszkaja w London
+18. Wyświetl tylko miasto i pensję (brutto - z
+uwzględnieniem podatku 22%) z tabeli
+pracownicy. Pensję zatytułuj „Pensja brutto
