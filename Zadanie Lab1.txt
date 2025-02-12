@@ -1,0 +1,17 @@
+1. Wyświetl wszystkie kolumny z tabeli aktorzy
+2. Wyświetl kolumny imie i nazwisko z tabeli pracownicy
+3. Wyświetl wszystko z tabeli wypozyczenia sortując id_kopii MALEJĄCO 
+4. Wybierz wszystkie wiersze z tabeli filmy i ZSSUMUJ WSZYSTKIE WIERSZE /Odpowiedz oczekiwana = 10;
+5. Wybierz wszystko z tabeli pracownicy, ale dla pracowników mieszkających w miasto New York
+6. Wybierz wszystko z tabeli filmy, lecz cena musi być większa niż 5 oraz mniejsza niż 10
+7. Wybierz tytuł oraz rok_produkcji z tabeli filmy i posortuj rok_rodukcji malejąco/ pierwszy rekord 1976
+8. Wybierz z tabeli aktorzy, aktorów, których imię zaczyna się na M lub R
+9. Wybierz tytul z tabeli filmy gdzie rok_produkcji jest w przedziale 1994 - 2004 WŁĄCZNIE -  DWA SPOSOBY 
+10. Wybierz średnia cene z tabeli filmy | 7.95
+11. Wybierz średnia pensje z tabeli pracownicy| 175
+12. Wybierz średnia pensje z tabeli pracownicy dla osób o imieniu John lub dla miasta London | 183.33
+13. Wybierz pensje z tabeli pracownicy i Zssumuj pensje po wartości |  875
+14. Wybierz najmniejsza cene z tabeli filmy
+15. Wybierz NAJWIEKSZA cene z tabeli filmy
+16. Wybierz wszystkie wiersze z tabeli filmy i ZSSUMUJ WSZYSTKIE WIERSZE WYKLUCZ POWTÓRZENIA /Odpowiedz oczekiwana = 10;
+17. Wybierz wszystko z tabeli pracownicy, którzy nie mieszkaja w London
