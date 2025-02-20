@@ -1,0 +1,29 @@
+1. Wybierające  wszystkie kolumny z tabeli aktorzy
+
+2. Wybierające nazwisko z tabeli aktorzy
+
+3. Wybierające wszystkie kolumny z tabeli aktorzy, ale tylko aktorów, których IMIE ZACZYNA SIĘ NA 'M'
+
+4. Wybierające wszystki  z tabeli filmy, ale tylko filmy między 1976-1986 DOWOLNA METODA
+
+5. Wybierające tytuł oraz cene dla filmów, których cena jest powyżej 7
+
+6. Wybierające tylko kolumnę cene i zrobienie jej sumy SUMOWANIE W KOLUMNIE dla tabeli filmy
+
+7 Wybierające wszystko z tabeli klineci, lecz tylko dla klientów, których imie zaczyna się na 'A' a nazwisko na 'Z'
+
+8. Wybierające wszystko z tabeli kopie, segregując od największego do najmniejszego.
+
+9. Wybierające id_kopii oraz czy_dostepna z tabeli kopie i pokazanie TYLKO DOSTEPNYCH 
+
+10. [NIE OBOWIAZUJE DO OCENY] Wybierające wszystko z tabeli obsada i grupowanie po id_filmu oraz policzeniu liczby wierszy dla danego rekordu z grupy.
+
+11. Wybierające   maksymalna wartość z kolumna pensja dla tabeli pracownicy
+
+12. Wybierajace  srednia wartość z kolumny pensja
+
+13. Wybierające wszystko z tabeli pracownicy i posortowanie ich alfabetycznie od A-Z po ich imieniu
+
+14.[NIE OBOWIAZUJE DO OCENY] Wybierajace wszystko z tablei wypożyczenia, grupowanie danych oraz zliczenie dla nich wierszy by sprawdzić ile jeden klinet ma wypożyczonych książek
+
+15. Wybierajace wszystko z tabeli wypozyceznie, gdzie data zwrotu to '2005-07-30' i sortując id_kopii malejąco.
