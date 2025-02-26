@@ -1,0 +1,169 @@
+Oto 20 zapytań SQL typu SELECT/JOIN na podstawie podanej bazy danych wypożyczalni samochodów:
+
+Wyświetl wszystkich klientów z ich danymi kontaktowymi:
+sql
+Wrap
+Copy
+SELECT imie_klienta, nazwisko_klienta, telefon_klienta, email_klienta 
+FROM klienci;
+Pokaż wszystkie dostępne samochody (dostepnosc > 0):
+sql
+Wrap
+Copy
+SELECT marka, model, data_prod 
+FROM samochody 
+WHERE dostepnosc > 0;
+Znajdź wszystkich pracowników i ich szefów:
+sql
+Wrap
+Copy
+SELECT p1.imie_pracownika, p1.nazwisko_pracownika, p2.imie_pracownika AS imie_szefa, p2.nazwisko_pracownika AS nazwisko_szefa
+FROM pracownicy p1
+LEFT JOIN pracownicy p2 ON p1.szef_id = p2.id_pracownika;
+Policz ilość wypożyczeń dla każdego klienta:
+sql
+Wrap
+Copy
+SELECT k.imie_klienta, k.nazwisko_klienta, COUNT(w.id_wypozyczenia) AS ilosc_wypozyczen
+FROM klienci k
+LEFT JOIN wypozyczenia w ON k.id_klienta = w.id_klienta
+GROUP BY k.id_klienta, k.imie_klienta, k.nazwisko_klienta;
+Wyświetl wszystkie wypożyczenia z danymi klienta i pracownika:
+sql
+Wrap
+Copy
+SELECT w.data_wyp, w.data_zwr, k.imie_klienta, k.nazwisko_klienta, p.imie_pracownika, p.nazwisko_pracownika
+FROM wypozyczenia w
+LEFT JOIN klienci k ON w.id_klienta = k.id_klienta
+LEFT JOIN pracownicy p ON w.id_pracownika = p.id_pracownika;
+Oblicz łączny koszt wypożyczeń dla każdego samochodu:
+sql
+Wrap
+Copy
+SELECT s.marka, s.model, SUM(dw.cena_doba * dw.ilosc_dob) AS laczny_koszt
+FROM samochody s
+JOIN dane_wypozyczen dw ON s.id_samochodu = dw.id_samochodu
+GROUP BY s.id_samochodu, s.marka, s.model;
+Znajdź klientów z Wrocławia i ich wypożyczenia:
+sql
+Wrap
+Copy
+SELECT k.imie_klienta, k.nazwisko_klienta, w.data_wyp, w.data_zwr
+FROM klienci k
+JOIN wypozyczenia w ON k.id_klienta = w.id_klienta
+WHERE k.miasto_klienta = 'Wrocław';
+Pokaż 5 najdroższych wypożyczeń:
+sql
+Wrap
+Copy
+SELECT w.id_wypozyczenia, s.marka, s.model, (dw.cena_doba * dw.ilosc_dob) AS koszt
+FROM wypozyczenia w
+JOIN dane_wypozyczen dw ON w.id_wypozyczenia = dw.id_wypozyczenia
+JOIN samochody s ON dw.id_samochodu = s.id_samochodu
+ORDER BY koszt DESC
+LIMIT 5;
+Wyświetl wypożyczenia z sierpnia 2022:
+sql
+Wrap
+Copy
+SELECT w.data_wyp, w.data_zwr, k.imie_klienta, k.nazwisko_klienta
+FROM wypozyczenia w
+LEFT JOIN klienci k ON w.id_klienta = k.id_klienta
+WHERE w.data_wyp BETWEEN '2022-08-01' AND '2022-08-31';
+Policz ilość wypożyczeń dla każdej marki samochodu:
+sql
+Wrap
+Copy
+SELECT s.marka, COUNT(dw.id_wypozyczenia) AS ilosc_wypozyczen
+FROM samochody s
+LEFT JOIN dane_wypozyczen dw ON s.id_samochodu = dw.id_samochodu
+GROUP BY s.marka;
+Znajdź klientów, którzy wypożyczyli więcej niż jeden samochód w jednym wypożyczeniu:
+sql
+Wrap
+Copy
+SELECT w.id_wypozyczenia, k.imie_klienta, k.nazwisko_klienta, COUNT(dw.id_samochodu) AS ilosc_samochodow
+FROM wypozyczenia w
+JOIN klienci k ON w.id_klienta = k.id_klienta
+JOIN dane_wypozyczen dw ON w.id_wypozyczenia = dw.id_wypozyczenia
+GROUP BY w.id_wypozyczenia, k.imie_klienta, k.nazwisko_klienta
+HAVING ilosc_samochodow > 1;
+Pokaż pracowników i ilość obsługiwanych przez nich wypożyczeń:
+sql
+Wrap
+Copy
+SELECT p.imie_pracownika, p.nazwisko_pracownika, COUNT(w.id_wypozyczenia) AS ilosc_wypozyczen
+FROM pracownicy p
+LEFT JOIN wypozyczenia w ON p.id_pracownika = w.id_pracownika
+GROUP BY p.id_pracownika, p.imie_pracownika, p.nazwisko_pracownika;
+Wyświetl wszystkie wypożyczenia mercedesów:
+sql
+Wrap
+Copy
+SELECT w.data_wyp, w.data_zwr, s.model
+FROM wypozyczenia w
+JOIN dane_wypozyczen dw ON w.id_wypozyczenia = dw.id_wypozyczenia
+JOIN samochody s ON dw.id_samochodu = s.id_samochodu
+WHERE s.marka = 'mercedes';
+Znajdź najdłuższe wypożyczenia:
+sql
+Wrap
+Copy
+SELECT w.data_wyp, w.data_zwr, DATEDIFF(w.data_zwr, w.data_wyp) AS ilosc_dni
+FROM wypozyczenia w
+ORDER BY ilosc_dni DESC
+LIMIT 5;
+Pokaż klientów, którzy wypożyczyli samochody wyprodukowane po 2020 roku:
+sql
+Wrap
+Copy
+SELECT DISTINCT k.imie_klienta, k.nazwisko_klienta
+FROM klienci k
+JOIN wypozyczenia w ON k.id_klienta = w.id_klienta
+JOIN dane_wypozyczen dw ON w.id_wypozyczenia = dw.id_wypozyczenia
+JOIN samochody s ON dw.id_samochodu = s.id_samochodu
+WHERE s.data_prod > 2020;
+Oblicz średni koszt wypożyczenia na dobę dla każdej marki:
+sql
+Wrap
+Copy
+SELECT s.marka, AVG(dw.cena_doba) AS srednia_cena_doba
+FROM samochody s
+JOIN dane_wypozyczen dw ON s.id_samochodu = dw.id_samochodu
+GROUP BY s.marka;
+Znajdź wypożyczenia bez przypisanego klienta:
+sql
+Wrap
+Copy
+SELECT w.id_wypozyczenia, w.data_wyp, w.data_zwr
+FROM wypozyczenia w
+WHERE w.id_klienta IS NULL;
+Pokaż szczegóły wypożyczeń z ceną całkowitą powyżej 1000 zł:
+sql
+Wrap
+Copy
+SELECT w.id_wypozyczenia, s.marka, s.model, (dw.cena_doba * dw.ilosc_dob) AS koszt_calkowity
+FROM wypozyczenia w
+JOIN dane_wypozyczen dw ON w.id_wypozyczenia = dw.id_wypozyczenia
+JOIN samochody s ON dw.id_samochodu = s.id_samochodu
+WHERE (dw.cena_doba * dw.ilosc_dob) > 1000;
+Wyświetl pracowników z Wrocławia i ich obsługiwane wypożyczenia:
+sql
+Wrap
+Copy
+SELECT p.imie_pracownika, p.nazwisko_pracownika, COUNT(w.id_wypozyczenia) AS ilosc_wypozyczen
+FROM pracownicy p
+LEFT JOIN wypozyczenia w ON p.id_pracownika = w.id_pracownika
+WHERE p.miasto_pracownika = 'Wrocław'
+GROUP BY p.id_pracownika, p.imie_pracownika, p.nazwisko_pracownika;
+Znajdź najczęściej wypożyczany samochód:
+sql
+Wrap
+Copy
+SELECT s.marka, s.model, COUNT(dw.id_wypozyczenia) AS ilosc_wypozyczen
+FROM samochody s
+JOIN dane_wypozyczen dw ON s.id_samochodu = dw.id_samochodu
+GROUP BY s.id_samochodu, s.marka, s.model
+ORDER BY ilosc_wypozyczen DESC
+LIMIT 1;
+Te zapytania pokazują różne możliwości analizy danych w tej bazie - od prostych wyszukiwań po bardziej złożone operacje z joinami, grupowaniem i obliczeniami.
