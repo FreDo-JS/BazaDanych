@@ -1,0 +1,9 @@
+1. wybierające wszystko z tabeli adres
+2. wybierające producent z tabeli samolot
+3. wybierające jedynie imie i nazwisko z tabeli pasażer, segregując alfabetycznie po imieniu
+4. Wybierajace najwieksza liczbe ID z tabeli adres 
+5. Wybierajace powiat WARSZAWA z tabeli adres
+6. wybierające status  z tabeli status_rezerwacji, gdzie status ZACZYNA SIĘ NA 'Z'
+7.Wybierajace numer_siedzenia z przedzialu od 8-15 włącznie z tabeli rezerwacja
+8. Wybieerajace numer_siedzenia oraz zliczenie ich sumy w kolumnie z tabeli rezerwajca
+9 wybierające id oraz nazwe pagazu z tabeli rezrwacja oraz ZLICZENIE ICH WIERSZY I POGRUPOWANIE DANYCH by dla bagaż podreczengo zliczylo 3 sztuki
