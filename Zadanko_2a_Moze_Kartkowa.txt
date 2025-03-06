@@ -1,0 +1,28 @@
+Poziom łatwy
+Wyświetl wszystkie marki samochodów dostępnych w wypożyczalni.
+Podaj imiona i nazwiska wszystkich klientów z miasta "Wrocław".
+Ile samochodów zostało wyprodukowanych po 2015 roku?
+Znajdź wszystkich pracowników, którzy nie mają szefa (szef_id IS NULL).
+Podaj daty wypożyczeń, które rozpoczęły się w maju 2022 roku.
+Poziom średni
+Wyświetl imiona i nazwiska klientów, którzy wypożyczyli samochód marki "Opel".
+(Użyj JOIN między klienci, wypozyczenia i dane_wypozyczen, samochody)
+Podaj liczbę wypożyczeń dla każdego pracownika (imię i nazwisko).
+(Użyj JOIN między pracownicy i wypozyczenia)
+Znajdź samochody (marka, model), które były wypożyczone więcej niż 5 razy.
+(Użyj JOIN między samochody i dane_wypozyczen)
+Wyświetl klientów (imię, nazwisko) i daty wypożyczeń, gdzie cena za dobę przekroczyła 500 zł.
+(Użyj JOIN między klienci, wypozyczenia i dane_wypozyczen)
+Podaj sumę kosztów wypożyczeń (cena_doba * ilosc_dob) dla każdego klienta.
+(Użyj JOIN między klienci, wypozyczenia i dane_wypozyczen)
+Poziom trudny
+Znajdź pracowników (imię, nazwisko), którzy obsłużyli wypożyczenia trwające dokładnie 1 dzień.
+(Użyj JOIN między pracownicy i wypozyczenia)
+Wyświetl klientów (imię, nazwisko), którzy wypożyczyli samochód wyprodukowany przed 2010 rokiem.
+(Użyj JOIN między klienci, wypozyczenia, dane_wypozyczen i samochody)
+Podaj markę i model samochodu, który wygenerował największy przychód (cena_doba * ilosc_dob).
+(Użyj JOIN między samochody i dane_wypozyczen)
+Znajdź klientów (imię, nazwisko), którzy nigdy nie wypożyczyli samochodu marki "BMW".
+(Użyj LEFT JOIN i warunek wykluczający)
+Podaj liczbę wypożyczeń dla każdego miasta klienta.
+(Użyj JOIN między klienci i wypozyczenia)
