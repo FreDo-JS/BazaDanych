@@ -1,0 +1,60 @@
+Wybierz imiona, nazwiska i numery telefonów klientów z tabeli klienci, którzy mieszkają w mieście "Wrocław".
+
+Policz liczbę samochodów z tabeli samochody, których rok produkcji (data_prod) jest późniejszy niż 2015.
+
+Wybierz markę, model i dostępność samochodów z tabeli samochody, posortowane rosnąco według marki.
+
+Wybierz imiona i nazwiska pracowników z tabeli pracownicy, którzy nie mają szefa (pole szef_id jest puste).
+
+Wybierz datę wypożyczenia i datę zwrotu z tabeli wypozyczenia dla wypożyczeń, które rozpoczęły się w maju 2022 roku.
+
+Wybierz unikalne marki samochodów z tabeli samochody.
+
+Policz liczbę wypożyczeń z tabeli wypozyczenia dla każdego pracownika i wyświetl wyniki tylko dla tych, którzy obsłużyli więcej niż 5 wypożyczeń.
+
+Wybierz imiona i nazwiska klientów z tabeli klienci oraz datę wypożyczenia z tabeli wypozyczenia dla wypożyczeń, które rozpoczęły się po 1 sierpnia 2022 roku.
+
+Wybierz markę i model samochodów z tabeli samochody, które mają dostępność większą niż 3.
+
+Zaktualizuj cenę za dobę w tabeli dane_wypozyczen na 300.00 dla wszystkich wypożyczeń samochodu o id_samochodu równym 6.
+
+Wybierz średnią cenę za dobę z tabeli dane_wypozyczen dla wypożyczeń trwających więcej niż 2 dni.
+
+Wybierz imiona i nazwiska klientów z tabeli klienci, którzy wypożyczyli samochód marki "Mercedes".
+
+Dodaj kolumnę uwagi typu tekstowego do tabeli wypozyczenia.
+
+Wybierz markę i model samochodów z tabeli samochody oraz cenę za dobę z tabeli dane_wypozyczen dla wypożyczeń o cenie większej niż 500 zł.
+
+Policz liczbę wypożyczeń dla każdego klienta z tabeli wypozyczenia i wyświetl tylko tych, którzy wypożyczyli samochód więcej niż 3 razy.
+
+Wybierz imiona i nazwiska pracowników z tabeli pracownicy, których szefem jest pracownik o id_pracownika równym 2.
+
+Usuń wszystkie rekordy z tabeli wypozyczenia, gdzie id_klienta jest pusty (NULL).
+
+Wybierz datę wypożyczenia i ilość dób z tabeli dane_wypozyczen dla wypożyczeń trwających dokładnie 1 dzień.
+
+Wybierz maksymalną cenę za dobę z tabeli dane_wypozyczen dla każdego modelu samochodu i posortuj wyniki malejąco według ceny.
+
+Wybierz imiona i nazwiska klientów z tabeli klienci, którzy mieszkają na ulicach zaczynających się na literę "M".
+
+Stwórz użytkownika recepcja na localhost z hasłem Rec123.
+
+Nadaj użytkownikowi recepcja prawa do przeglądania i aktualizacji danych w tabeli klienci.
+
+Wybierz markę i model samochodów z tabeli samochody, które nie były jeszcze wypożyczone (nie ma ich w tabeli dane_wypozyczen).
+
+Wybierz imiona i nazwiska pracowników z tabeli pracownicy oraz datę wypożyczenia z tabeli wypozyczenia dla wypożyczeń dokonanych w lipcu 2022 roku.
+
+Policz całkowity koszt wypożyczenia (cena za dobę × ilość dób) dla każdego wypożyczenia z tabeli dane_wypozyczen i wyświetl tylko te o koszcie większym niż 1000 zł.
+
+Wybierz unikalne miasta klientów z tabeli klienci i posortuj je alfabetycznie.
+
+
+Zaktualizuj dostępność samochodów w tabeli samochody na 0 dla wszystkich samochodów wyprodukowanych przed 2010 rokiem.
+
+Wybierz imiona i nazwiska klientów z tabeli klienci oraz markę samochodów z tabeli samochody dla wypożyczeń trwających dłużej niż 3 dni.
+
+Wybierz minimalną i maksymalną cenę za dobę z tabeli dane_wypozyczen dla każdego samochodu i posortuj wyniki według id_samochodu.
+
+Usuń tabelę pracownicy z bazy danych.
