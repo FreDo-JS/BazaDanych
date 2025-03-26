@@ -1,9 +1,41 @@
-1. wybierające wszystko z tabeli adres
-2. wybierające producent z tabeli samolot
-3. wybierające jedynie imie i nazwisko z tabeli pasażer, segregując alfabetycznie po imieniu
-4. Wybierajace najwieksza liczbe ID z tabeli adres 
-5. Wybierajace powiat WARSZAWA z tabeli adres
-6. wybierające status  z tabeli status_rezerwacji, gdzie status ZACZYNA SIĘ NA 'Z'
-7.Wybierajace numer_siedzenia z przedzialu od 8-15 włącznie z tabeli rezerwacja
-8. Wybieerajace numer_siedzenia oraz zliczenie ich sumy w kolumnie z tabeli rezerwajca
-9 wybierające id oraz nazwe pagazu z tabeli rezrwacja oraz ZLICZENIE ICH WIERSZY I POGRUPOWANIE DANYCH by dla bagaż podreczengo zliczylo 3 sztuki
+Kartkówka – Zapytania SQL (20 zadań)
+
+Wybierz imiona, nazwiska i numery telefonów klientów z tabeli klienci, którzy mieszkają w mieście "Poznań".
+
+Policz liczbę samochodów z tabeli samochody, których rok produkcji jest późniejszy niż 2020.
+
+Wybierz markę, model i dostępność samochodów z tabeli samochody, posortowane rosnąco według dostępności.
+
+Wybierz imiona i nazwiska pracowników z tabeli pracownicy, którzy nie mają przypisanego szefa (pole szef_id jest NULL).
+
+Wybierz datę wypożyczenia i datę zwrotu z tabeli wypozyczenia dla wypożyczeń rozpoczętych w marcu 2023 roku.
+
+Wybierz unikalne modele samochodów z tabeli samochody.
+
+Policz liczbę wypożyczeń z tabeli wypozyczenia dla każdego pracownika i wyświetl tylko tych, którzy obsłużyli więcej niż 3 wypożyczenia
+
+Wybierz imiona i nazwiska klientów z tabeli klienci oraz datę wypożyczenia z tabeli wypozyczenia dla wypożyczeń rozpoczętych po 15 września 2022 roku.
+
+Wybierz markę i model samochodów z tabeli samochody, które mają dostępność równą 2.
+
+Zaktualizuj cenę za dobę w tabeli dane_wypozyczen na 250.00 dla wszystkich wypożyczeń samochodu o id_samochodu równym 4.
+
+Wybierz maksymalną cenę za dobę z tabeli dane_wypozyczen dla wypożyczeń trwających więcej niż 4 dni.
+
+Wybierz imiona i nazwiska klientów z tabeli klienci, którzy wypożyczyli samochód marki "BMW".
+
+Dodaj kolumnę status typu tekstowego do tabeli samochody.
+
+Wybierz markę i model samochodów z tabeli samochody oraz cenę za dobę z tabeli dane_wypozyczen dla wypożyczeń o cenie mniejszej niż 200 zł.
+
+Policz liczbę wypożyczeń dla każdego klienta z tabeli wypozyczenia i wyświetl tylko tych, którzy wypożyczyli samochód więcej niż 2 razy.
+
+Wybierz imiona i nazwiska pracowników z tabeli pracownicy, których szefem jest pracownik o id_pracownika równym 5.
+
+Usuń wszystkie rekordy z tabeli wypozyczenia, gdzie data_zwrotu jest pusta (NULL).
+
+Wybierz datę wypożyczenia i ilość dób z tabeli dane_wypozyczen dla wypożyczeń trwających dokładnie 3 dni.
+
+Wybierz minimalną cenę za dobę z tabeli dane_wypozyczen dla każdego modelu samochodu i posortuj wyniki rosnąco według ceny.
+
+Stwórz użytkownika admin na localhost z hasłem "Adm789" i nadaj mu prawa do przeglądania i aktualizacji danych w tabeli wypozyczenia.
